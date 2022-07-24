@@ -62,4 +62,6 @@ REPOSITORY    TAG       IMAGE ID       CREATED         SIZE<br>
 python-test   latest    69b59e6caf12   2 minutes ago   920MB<br>
 hello-world   latest    feb5d9fea6a5   10 months ago   13.3kB<br>
 
-
+## Para enviar a imagem ao Docker Hub
+docker login<br>
+ sudo docker push szalbuque/python-test<br>
