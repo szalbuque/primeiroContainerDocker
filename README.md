@@ -35,6 +35,11 @@ https://github.com/szalbuque/primeiroContainerDocker/blob/main/dockerfile
 
 # Usei o comando docker build para criar a imagem:
 > azureuser@docker1:~/testepy$ sudo docker build -t python-test .<br>
+<br>
+(para gerar a imagem que vou poder subir no Docker Hub)<br>
+docker build -t szalbuque/python-test .<br>
+<br>
+
 Sending build context to Docker daemon  3.584kB<br>
 Step 1/3 : FROM python:latest<br>
  ---> 930516bcf910<br>
