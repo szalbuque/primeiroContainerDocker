@@ -3,14 +3,14 @@
 https://www.freecodecamp.org/portuguese/news/um-guia-para-iniciantes-em-docker-como-criar-sua-primeira-aplicacao-com-o-docker/
 
 # Criei uma vm na Azure
-- Azure
--- grupo de recursos containersAvanade50
---- vm docker1 (ip 20.206.76.7)
---- ssh -i azure azureuser@20.206.76.7
---- sudo apt update
---- sudo apt upgrade
---- sudo apt install docker.io
---- sudo docker run hello-world
+- Azure<br>
+-- grupo de recursos containersAvanade50<br>
+--- vm docker1 (ip 20.206.76.7)<br>
+--- ssh -i azure azureuser@20.206.76.7<br>
+--- sudo apt update<br>
+--- sudo apt upgrade<br>
+--- sudo apt install docker.io<br>
+--- sudo docker run hello-world<br>
 
 # To generate this message (hello-world), Docker took the following steps:
  1. The Docker client contacted the Docker daemon.
@@ -22,10 +22,10 @@ https://www.freecodecamp.org/portuguese/news/um-guia-para-iniciantes-em-docker-c
     to your terminal.
 
 
-## criei um script pequeno em Python e salvei no arquivo main.py, numa pasta que criei no /home/azureuser/testepy:
->  Este é o script:
-azureuser@docker1:~/testepy$ cat main.py
-#!/usr/bin/env python3
+## Criei um script pequeno em Python e salvei no arquivo main.py, numa pasta que criei no /home/azureuser/testepy:
+>  Este é o script:<br>
+azureuser@docker1:~/testepy$ cat main.py<br>
+#!/usr/bin/env python3<br>
 print("O Docker é mágico!")
 
 
@@ -34,27 +34,27 @@ print("O Docker é mágico!")
 https://github.com/szalbuque/primeiroContainerDocker/blob/main/dockerfile
 
 # Usei o comando docker build para criar a imagem:
-> azureuser@docker1:~/testepy$ sudo docker build -t python-test .
-Sending build context to Docker daemon  3.584kB
-Step 1/3 : FROM python:latest
- ---> 930516bcf910
-Step 2/3 : COPY main.py /
- ---> 830334214516
-Step 3/3 : CMD [ "python", "./main.py" ]
- ---> Running in d50431a05db3
-Removing intermediate container d50431a05db3
- ---> 69b59e6caf12
-Successfully built 69b59e6caf12
-Successfully tagged python-test:latest
+> azureuser@docker1:~/testepy$ sudo docker build -t python-test .<br>
+Sending build context to Docker daemon  3.584kB<br>
+Step 1/3 : FROM python:latest<br>
+ ---> 930516bcf910<br>
+Step 2/3 : COPY main.py /<br>
+ ---> 830334214516<br>
+Step 3/3 : CMD [ "python", "./main.py" ]<br>
+ ---> Running in d50431a05db3<br>
+Removing intermediate container d50431a05db3<br>
+ ---> 69b59e6caf12<br>
+Successfully built 69b59e6caf12<br>
+Successfully tagged python-test:latest<br>
 
 ## Usei o comando docker run para executar o código do container
->azureuser@docker1:~/testepy$ sudo docker run python-test
+>azureuser@docker1:~/testepy$ sudo docker run python-test<br>
 O Docker é mágico!
 
 ## Usei o comando docker images para ver as imagens que estão na máquina:
-azureuser@docker1:~/testepy$ sudo docker images
-REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
-python-test   latest    69b59e6caf12   2 minutes ago   920MB
-hello-world   latest    feb5d9fea6a5   10 months ago   13.3kB
+azureuser@docker1:~/testepy$ sudo docker images<br>
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE<br>
+python-test   latest    69b59e6caf12   2 minutes ago   920MB<br>
+hello-world   latest    feb5d9fea6a5   10 months ago   13.3kB<br>
 
 
