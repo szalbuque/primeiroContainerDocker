@@ -22,7 +22,7 @@ https://www.freecodecamp.org/portuguese/news/um-guia-para-iniciantes-em-docker-c
     to your terminal.
 
 
-# criei um script pequeno em Python e salvei no arquivo main.py, numa pasta que criei no /home/azureuser/testepy:
+## criei um script pequeno em Python e salvei no arquivo main.py, numa pasta que criei no /home/azureuser/testepy:
 >  Este é o script:
 azureuser@docker1:~/testepy$ cat main.py
 #!/usr/bin/env python3
@@ -34,7 +34,7 @@ print("O Docker é mágico!")
 https://github.com/szalbuque/primeiroContainerDocker/blob/main/dockerfile
 
 # Usei o comando docker build para criar a imagem:
-azureuser@docker1:~/testepy$ sudo docker build -t python-test .
+> azureuser@docker1:~/testepy$ sudo docker build -t python-test .
 Sending build context to Docker daemon  3.584kB
 Step 1/3 : FROM python:latest
  ---> 930516bcf910
@@ -47,11 +47,11 @@ Removing intermediate container d50431a05db3
 Successfully built 69b59e6caf12
 Successfully tagged python-test:latest
 
---- Usei o comando docker run para executar o código do container
-azureuser@docker1:~/testepy$ sudo docker run python-test
+## Usei o comando docker run para executar o código do container
+>azureuser@docker1:~/testepy$ sudo docker run python-test
 O Docker é mágico!
 
---- Usei o comando docker images para ver as imagens que estão na máquina:
+## Usei o comando docker images para ver as imagens que estão na máquina:
 azureuser@docker1:~/testepy$ sudo docker images
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 python-test   latest    69b59e6caf12   2 minutes ago   920MB
