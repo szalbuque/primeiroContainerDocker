@@ -31,7 +31,7 @@ print("O Docker é mágico!")
 
 # Criei um dockerfile para criar um container com este script Python:
 ### Este é o dockerfile (o símbolo # inicia uma linha de comentário dentro do dockerfile):
-### 
+https://github.com/szalbuque/primeiroContainerDocker/blob/main/dockerfile
 
 # Usei o comando docker build para criar a imagem:
 azureuser@docker1:~/testepy$ sudo docker build -t python-test .
